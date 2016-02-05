@@ -1,4 +1,4 @@
 # Substance Configuration
 
 Ability to easily model Substance parameters in the Inspector and
-manipulate values without lots of manual configuration.
+manipulate values at runtime without lots of manual configuration.

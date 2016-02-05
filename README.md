@@ -7,10 +7,10 @@ manipulate values at runtime without lots of manual configuration.
 ```csharp 
 public class GrassSubstanceParameters : SubstanceParameters
 {
-    [Description("Grass_Amount")]
+    [InputParameter("Grass_Amount")]
     public float GrassAmount;
 
-    [Description("GrassLength")]
+    [InputParameter("GrassLength")]
     public float GrassLength;
 }
 ``` 

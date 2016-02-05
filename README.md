@@ -16,5 +16,5 @@ public class GrassSubstanceParameters : SubstanceParameters
 ``` 
 
 # Connect
-![Connect](Connect.png)
+![Connect](Connect.PNG)
 

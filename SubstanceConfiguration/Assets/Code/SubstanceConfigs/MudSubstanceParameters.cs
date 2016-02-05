@@ -7,13 +7,13 @@ using System.Linq.Expressions;
 public class MudSubstanceParameters : SubstanceParameters
 {
 
-    [Description("GrassAmount")]
+    [InputParameter("GrassAmount")]
     public float GrassAmount;
 
-    [Description("WaterControl_Cracks")]
+    [InputParameter("WaterControl_Cracks")]
     public float WaterControl;
 
-    [Description("WaterAmount")]
+    [InputParameter("WaterAmount")]
     public float WaterAmount;
 
     void Start()

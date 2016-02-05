@@ -3,11 +3,11 @@ using System.Linq;
 using System.Collections.Generic;
 using System;
 
-public class DescriptionAttribute : Attribute
+public class InputParameterAttribute : Attribute
 {
     private string desc;
 
-    public DescriptionAttribute(string v)
+    public InputParameterAttribute(string v)
     {
         this.desc = v;
 

@@ -7,10 +7,10 @@ using System.Linq.Expressions;
 public class GrassSubstanceParameters : SubstanceParameters
 {
 
-    [Description("Grass_Amount")]
+    [InputParameter("Grass_Amount")]
     public float GrassAmount;
 
-    [Description("GrassLength")]
+    [InputParameter("GrassLength")]
     public float GrassLength;
 
     void Start()

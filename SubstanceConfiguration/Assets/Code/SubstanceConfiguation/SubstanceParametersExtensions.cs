@@ -12,7 +12,7 @@ public static class SubstanceParametersExtensions
 
         return properties.Select(x =>
         {
-            var values = x.GetCustomAttributes(typeof(DescriptionAttribute), false).Cast<DescriptionAttribute>();
+            var values = x.GetCustomAttributes(typeof(InputParameterAttribute), false).Cast<InputParameterAttribute>();
             var name = values.FirstOrDefault();
 
             var value = source.GetType().GetField(x.Name).GetValue(source);

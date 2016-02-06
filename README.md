@@ -18,3 +18,6 @@ public class GrassSubstanceParameters : SubstanceParameters
 # Connect
 ![Connect](Connect.PNG)
 
+
+# Manipulate
+See [example](https://github.com/jbw/SubstanceConfiguration/blob/master/SubstanceConfiguration/Assets/RuntimeManipulationExample.cs)

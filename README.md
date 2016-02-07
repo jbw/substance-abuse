@@ -4,6 +4,9 @@ Ability to easily model Substance parameters in the Inspector and
 manipulate values at runtime without lots of manual configuration.
 
 # Create config
+
+```InputParameter``` maps the exposed Substance parameter name to your parameter config class. 
+
 ```csharp 
 public class GrassSubstanceParameters : SubstanceParameters
 {

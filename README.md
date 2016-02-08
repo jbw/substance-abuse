@@ -1,7 +1,6 @@
 # Substance Configuration
 
-Ability to easily model Substance parameters in the Inspector and
-manipulate values at runtime without lots of manual configuration.
+Ability to easily model Substance parameters and manipulate their values at runtime. Defaults can be set in the Inspector.
 
 # Create config
 

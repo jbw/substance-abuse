@@ -1,10 +1,10 @@
-# Substance Configuration
+# substance-abuse
 
-Ability to easily model Substance parameters and manipulate their values at runtime. Defaults can be set in the Inspector.
+Ability to simply configure a model parameters from a Substance texture and manipulate their values at runtime. Defaults can also be set in the Inspector.
 
 # Create config
 
-```InputParameter``` maps the exposed Substance parameter name to your parameter config class. 
+```InputParameter``` value should map to the exposed Substance parameter name. If you can't find it, hover over the parameter of your Procedural Material component in Unity's Inspector window. 
 
 ```csharp 
 public class GrassSubstanceParameters : SubstanceParameters
@@ -18,13 +18,13 @@ public class GrassSubstanceParameters : SubstanceParameters
 ``` 
 
 # Connect
+Connect the parameter class to the configuration. 
+
 ![Connect](Connect.PNG)
 
 
 # Manipulate
-
-![Manipulate](Manipulate.PNG)
-
+Use your components and maniplate their parameters. 
 ```csharp
 using UnityEngine;
 using System.Collections;
@@ -54,6 +54,8 @@ public class RuntimeManipulationExample : MonoBehaviour {
 ```
 
 See [example](https://github.com/jbw/SubstanceConfiguration/blob/master/SubstanceConfiguration/Assets/RuntimeManipulationExample.cs) of how to change Substance property values for a configuration. 
+
+![Manipulate](Manipulate.PNG)
 
 
 # Known Compatibility 

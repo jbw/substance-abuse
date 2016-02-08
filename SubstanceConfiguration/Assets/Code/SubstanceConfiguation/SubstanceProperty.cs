@@ -1,8 +1,4 @@
-﻿using UnityEngine;
-using System.Linq;
-using System.Collections.Generic;
-using System;
-
+﻿
 public class SubstanceProperty
 {
     public SubstanceProperty(string paramValue, float value)

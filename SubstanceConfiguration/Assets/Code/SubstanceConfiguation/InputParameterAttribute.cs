@@ -5,17 +5,16 @@ using System;
 
 public class InputParameterAttribute : Attribute
 {
-    private string desc;
+    private string parameterName;
 
-    public InputParameterAttribute(string v)
+    public InputParameterAttribute(string inputParameterName)
     {
-        this.desc = v;
-
+        this.parameterName = inputParameterName;
     }
 
     public override string ToString()
     {
-        return desc;
+        return parameterName;
     }
 }
 

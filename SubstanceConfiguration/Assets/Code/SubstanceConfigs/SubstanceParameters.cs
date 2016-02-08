@@ -4,7 +4,7 @@ using System.Collections.Generic;
 using System;
 using System.Linq.Expressions;
 
-public class SubstanceParameters : MonoBehaviour
+public abstract class SubstanceParameters : MonoBehaviour
 {
     void Start()
     {

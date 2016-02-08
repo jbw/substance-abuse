@@ -1,9 +1,11 @@
-﻿using System.Linq;
+﻿using Assets.Code.SubstanceConfiguation;
 using UnityEngine;
 
 public class SubstanceConfiguration : MonoBehaviour
 {
     private Renderer _renderer;
+    private SubstanceSettings _settings;
+
     public SubstanceParameters parameters;
 
     void Start()
@@ -12,27 +14,33 @@ public class SubstanceConfiguration : MonoBehaviour
         Config();
     }
 
-    // Update is called once per frame
     void Update()
     {
-
     }
 
-    public void Config()
+    public SubstanceConfiguration()
     {
+        _settings = new SubstanceSettings();
+    }
+
+    public void Config(SubstanceSettings settings = null)
+    {
+        if (parameters == null) return;
+        if (settings != null) _settings = settings;
+
         ProceduralMaterial substance = _renderer.material as ProceduralMaterial;
-        ProceduralMaterial.substanceProcessorUsage = ProceduralProcessorUsage.All;
+        ProceduralMaterial.substanceProcessorUsage = _settings.ProcessorUsage;
 
         if (substance)
         {
-            substance.cacheSize = ProceduralCacheSize.NoLimit;
+            substance.cacheSize = _settings.CacheSize;
 
             //Find out the real names of the properties to create configs.
             //var substanceParamterNames = substance
             //    .GetProceduralPropertyDescriptions()
             //    .Select(x => x.name)
             //    .ToList();
-          
+
             var properties = parameters.GetProperties();
 
             foreach (var property in properties)

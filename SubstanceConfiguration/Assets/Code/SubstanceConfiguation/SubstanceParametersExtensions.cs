@@ -1,5 +1,4 @@
-﻿using UnityEngine;
-using System.Linq;
+﻿using System.Linq;
 using System.Collections.Generic;
 using System;
 using System.Linq.Expressions;
@@ -8,16 +7,17 @@ public static class SubstanceParametersExtensions
 {
     public static IEnumerable<SubstanceProperty> GetProperties(this SubstanceParameters source)
     {
-        var properties = source.GetType().GetFields().ToList();
+        if (source == null) return null;
+
+        var properties = source.GetType().GetFields();
 
         return properties.Select(x =>
         {
             var values = x.GetCustomAttributes(typeof(InputParameterAttribute), false).Cast<InputParameterAttribute>();
             var name = values.FirstOrDefault();
-
             var value = source.GetType().GetField(x.Name).GetValue(source);
-
             var property = new SubstanceProperty(name.ToString(), (float)value);
+
             return property;
 
         });

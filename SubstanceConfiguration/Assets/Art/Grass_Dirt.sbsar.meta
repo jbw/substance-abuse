@@ -1,6 +1,6 @@
 fileFormatVersion: 2
 guid: 7cb96f7124c4e0b4e9dce61b968491ba
-timeCreated: 1454705657
+timeCreated: 1454871072
 licenseType: Free
 SubstanceImporter:
   serializedVersion: 5
@@ -50,7 +50,7 @@ SubstanceImporter:
         texture: {instanceID: 0}
     - name: Grass_depth_Position
       value:
-        scalar[0]: 0.3
+        scalar[0]: 0.27
         scalar[1]: 0
         scalar[2]: 0
         scalar[3]: 0

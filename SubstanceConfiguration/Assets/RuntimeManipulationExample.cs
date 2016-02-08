@@ -1,5 +1,5 @@
 ﻿using UnityEngine;
-using System.Collections;
+using Assets.Code.SubstanceConfiguation;
 
 public class RuntimeManipulationExample : MonoBehaviour {
 
@@ -13,7 +13,21 @@ public class RuntimeManipulationExample : MonoBehaviour {
 
         var config = aCube.GetComponent<SubstanceConfiguration>();
         config.parameters = grassParams;
-        config.Config();
+
+        var low = new SubstanceSettings
+        {
+            CacheSize = ProceduralCacheSize.None,
+            ProcessorUsage = ProceduralProcessorUsage.Half
+        };
+
+        var high = new SubstanceSettings
+        {
+            CacheSize = ProceduralCacheSize.NoLimit,
+            ProcessorUsage = ProceduralProcessorUsage.All
+        };
+
+        config.Config(low);
+
     }
 
     // Update is called once per frame
